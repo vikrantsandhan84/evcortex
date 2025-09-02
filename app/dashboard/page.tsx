@@ -22,12 +22,20 @@ export default function Dashboard() {
       <div className="bg-[#2e55cc] text-white">
         {/* Top status bar */}
         <div className="flex items-center justify-between px-6 py-3">
-          <div className="text-2xl font-bold">CK</div>
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-puOz92jwO1SMcqYD1fV8MkxgbDjoNp.png"
+            alt="CK Logo"
+            className="h-8 w-auto"
+          />
 
           <div className="flex items-center gap-6 text-sm">
             <div className="flex items-center gap-2">
               <span>AVAILABLE / TOTAL</span>
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-PIKtCT9x0ev075VbYeWjVgNjLGb0a5.png"
+                alt="Available"
+                className="w-4 h-4"
+              />
               <span className="text-green-400 font-semibold">3</span>
               <span>/</span>
               <span>17</span>
@@ -35,19 +43,31 @@ export default function Dashboard() {
 
             <div className="flex items-center gap-2">
               <span>OCCUPIED</span>
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-PIKtCT9x0ev075VbYeWjVgNjLGb0a5.png"
+                alt="Available"
+                className="w-4 h-4"
+              />
               <span className="text-blue-400 font-semibold">0</span>
             </div>
 
             <div className="flex items-center gap-2">
               <span>UNAVAILABLE</span>
-              <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-PIKtCT9x0ev075VbYeWjVgNjLGb0a5.png"
+                alt="Available"
+                className="w-4 h-4"
+              />
               <span className="text-yellow-400 font-semibold">14</span>
             </div>
 
             <div className="flex items-center gap-2">
               <span>FAULTY</span>
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-PIKtCT9x0ev075VbYeWjVgNjLGb0a5.png"
+                alt="Available"
+                className="w-4 h-4"
+              />
               <span className="text-red-400 font-semibold">0</span>
             </div>
 
@@ -91,9 +111,14 @@ export default function Dashboard() {
 
             {openSubmenu === "locations" && (
               <div className="absolute left-0 top-full mt-1 bg-white text-black rounded-lg shadow-lg py-2 min-w-40 z-50">
-                <div className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer">View All</div>
-                <div className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer">Add New</div>
-                <div className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer">Manage</div>
+                
+                
+                <button
+                  onClick={() => router.push("/manufactures")}
+                  className="px-4 py-2 hover:bg-gray-100 text-sm cursor-pointer w-full text-left"
+                >
+                  View Manufactures
+                </button>
               </div>
             )}
           </div>
